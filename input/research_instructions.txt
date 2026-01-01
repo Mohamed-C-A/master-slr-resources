@@ -1,0 +1,41 @@
+Core Objective:
+Fully automate the Systematic Literature Review (SLR) workflow based on the provided Parsifal protocol (parsifal_sota_workflow.txt), with a primary focus on arXiv as the central source for state-of-the-art updates.
+
+1. Source Strategy & Access Handling
+- Primary Source: Treat arXiv as the definitive source for latest updates.
+- Access Protocol:
+  - Attempt to access full-text PDFs directly via public URLs first.
+  - VPN Contingency: If a direct PDF link is blocked or requires a subscription (e.g., IEEE, Springer), flag the item immediately with the tag [VPN_REQUIRED]. Do not discard it.
+  - Fallback Analysis: If full text is inaccessible, proceed with screening based strictly on Title and Abstract, but mark the confidence level as "Low - Abstract Only".
+- Deduplication: Identify and merge duplicates based on Title similarity > 90%, prioritizing the version with the most recent timestamp or peer-reviewed status.
+
+2. Automated Screening (Inclusion/Exclusion)
+- Strict Filtering: Apply the Exclusion Criteria defined in the protocol rigourously:
+  - Reject: Marketing materials, pure opinion pieces, non-generative AI topics.
+  - Reject: Single-shot LLM approaches without agentic components.
+- Agentic Focus: Prioritize papers explicitly mentioning "agentic workflows," "multi-agent systems," "tool use," or "self-correction" in the context of proposal/quote generation.
+
+3. Quality Assessment (Scoring Logic)
+- Algorithm: Implement the scoring logic from the Quality Assessment Checklist:
+  - (*) Must-Have criteria (Seminal work/Core protocol) carries a weight of 2.5.
+  - Standard Yes = 1.0, Partially = 0.5, No = 0.0.
+- Cutoff Enforcement: Automatically discard any paper with a total score below 2.5.
+- Max Score Calculation: Note the theoretical max is 12.5, but treat the (*) Must-Have as a binary booster that overrides lower scores if present.
+
+4. Data Extraction & Persistency
+- Structured Output: For every processed paper, generate a JSON log entry matching the Data Extraction Form fields.
+- Mandatory Fields:
+  - Source_ID (DOI/ArXiv ID)
+  - Decision (Include/Exclude)
+  - Reasoning (Brief text explaining the decision based on criteria)
+  - QA_Score (Numerical value)
+  - VPN_Status (Required/Not Required)
+
+5. Workflow Execution Style
+- Batch Processing: Process search results in batches (e.g., 10 at a time) to maintain context window efficiency.
+- Audit Trail: Maintain a "Chain of Thought" log for borderline decisions (e.g., "Why was paper X excluded despite relevant keywords?").
+- Self-Correction: If a search string yields zero results, autonomously suggest a broader synonym from the Keywords and Synonyms list in the protocol.
+
+6. Final Output Generation
+- Top 20 Selection: After processing all candidates, rank them by QA_Score.
+- Deliverable: Present the final list of max. 20 papers formatted as a markdown table with columns: Rank, Title, Score, Main Contribution (Pattern), and URL.

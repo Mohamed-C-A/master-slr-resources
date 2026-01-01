@@ -1,0 +1,287 @@
+Important References:
+- C. Wohlin, P. Runeson, M. Höst, M. C. Ohlsson, B. Regnell and A. Wesslén, "Experimentation in Software Engineering", Springer, ISBN 978-3-642-29043-5, 2012.
+- Kitchenham B (2007) Guidelines for performing Systematic Literature Reviews in Software Engineering, Version 2.3, EBSE Technical Report EBSE-2007-01, Keele University and University of Durham
+- https://parsif.al/about/
+
+---
+---
+
+Section "Review"
+
+Step 1: Review Details
+"""
+Title: See Project Info
+Description: The SLR analyses whether and when agentic AI workflows are necessary for automated quotation generation and identifies the key agentic design patterns from the literature.
+Objectives: The aim is to evaluate the necessity of agentic AI workflows for quotation creation and to systematise the key agentic design patterns in the literature in such a way that they can serve as a basis for our own implementation.
+Research Questions: 
+-> RQ 1: To what extent is the implementation of agentic AI workflows necessary for automated assistance in proposal generation?
+-> RQ 1.1: Which agentic AI design patterns are essential for realizing agentic AI workflows in this context?
+Authors: Mohamed Chamharouch Aukili
+"""
+
+---
+---
+
+Section "Planning"
+
+---
+
+Subsection "Protocol"
+
+Step 1: Objectives
+"""
+About the Objectives
+Identification of the need for a review. The need for a systematic review originates from a researcher aiming to understand the state-of-the-art in an area, or from practitioners wanting to use empirical evidence in their strategic decision-making or improvement activities. If there are more or less systematic literature reviews available in the field, they should be appraised regarding scope and quality, to evaluate if they are sufficient to meet the current needs for a review. A systematic literature review may be viewed as a research method for making a literature review.
+"""
+
+Step 2: PICOC
+"""
+About the PICOC
+PICOC stands for population, intervention, comparison, outcomes and context.
+
+The population in which the evidence is collected, i.e. which group of people, programs or businesses are of interest for the review?
+The intervention applied in the empirical study, i.e. which technology, tool or procedure is under study?
+The comparison to which the intervention is compared, i.e. how is the control treatment defined? In particular the ‘placebo’ intervention is critical, as “not using the intervention” is mostly not a valid action in software engineering.
+The outcomes of the experiment should not only be statistically significant, but also be significant from a practical point of view. For example, it is probably not interesting that an outcome is 10% better in some respect if it is twice as time consuming.
+The context of the study must be defined, which is an extended view of the population, including whether it is conducted in academia or industry, in which industry segment, and also the incentives for the subjects.
+"""
+
+Step 3: Research Questions (see Project Info)
+"""
+About the Research Questions
+The area of the systematic review and the specific research questions set the focus for the identification of the primary studies, the extraction of data from the studies and the analysis. Hence, the research questions must be well thought through and phrased. Aspects to take into account in phrasing the research questions include the PICOC.
+"""
+
+Step 4: Keywords and Synonyms
+"""
+About the Keywords and Synonyms
+The keywords are basically extracted from the population, intervention, comparison and outcomes.
+
+Every keyword must be related with one step of the PICOC. Please note, the context is related with the population.
+
+After determining all relevant keywords, you should relate them if all their synonyms to make your search string broader.
+
+Example:
+Keyword				| Synonyms
+software (Population)		| application, product, Web, WWW, Project, development
+cross company (Intervention) 	| cross organisation, cross organization, multiple-organizational, multiple-organisational model
+within-organisation (Comparison)| within-organization, within-organizational, within-organisational, single company
+Accuracy (Outcome)		| Mean Magnitude, Relative Error
+"""
+
+Step 5: Search String
+"""
+About the Search String
+The golden rule to design a good search string is to separate the keywords and synonyms with the boolean operator `OR` and separate the population, intervention, comparison and outcomes with parentheses and using the boolean operator `AND`, as following:
+```
+(population   OR synonym-1 OR synonym-2 OR synonym-n) AND
+(intervention OR synonym-1 OR synonym-2 OR synonym-n) AND
+(comparison   OR synonym-1 OR synonym-2 OR synonym-n) AND
+(outcomes     OR synonym-1 OR synonym-2 OR synonym-n)
+```
+
+Good example
+```
+(software OR application OR product OR Web OR WWW OR project) AND (development OR "cross company" OR "cross organisation" OR "cross organization" OR multiple-organizational) AND ("multiple-organisational model" OR within-organisation OR within-organization OR within-organizational OR within-organisational OR "single company") AND (Accuracy OR "Mean Magnitude" OR "Relative Error")
+```
+
+Bad example
+```
+software or application or product or Web or WWW or project and development or cross company or cross organisation or cross organization or multiple-organizational and multiple-organisational model or within-organisation or within-organization or within-organizational or within-organisational or single company and Accuracy or Mean Magnitude or Relative Error
+```
+
+Hint: Use uppercase for boolean operators (AND, OR), double quotes for composite words and parentheses to logically separate the keywords and synonyms.
+"""
+
+Step 6: Sources
+"""
+Sources
+Name			| URL
+arXiv 			| https://arxiv.org
+Google Scholar 		| https://scholar.google.com
+Google Scholar Labs 	| https://scholar.google.com/scholar_labs/search?hl=en
+Springer Link 		| http://link.springer.com
+ResearchGate 		| https://www.researchgate.net
+Scopus 			| http://www.scopus.com
+IEEE Xplore 		| https://ieeexplore.ieee.org/Xplore/home.jsp
+Semantic Scholar 	| https://www.semanticscholar.org/
+OpenAlex 		| https://openalex.org/
+"""
+
+Step 7: Selection Criteria
+"""
+Inclusion Criteria:
+```
+- Content: Studies providing architectural details, implementation frameworks, or protocol evaluations (Feasibility focus).
+- Domain: Quote Generation or transferable enterprise domains (e.g., Legal, Software Eng.).
+- Meta: English language; Published ≥ 2023; Peer-reviewed papers, arXiv preprints, & technical whitepapers.
+```
+Exclusion Criteria:
+```
+- Quality: Purely opinionated papers, marketing materials, slide decks, or abstracts without full text.
+- Scope: Creative writing, simple customer-support chatbots, or unrelated scientific fields (Bio/Med) without transferability.
+- Tech: Traditional rule-based automation, non-generative AI, or single-shot LLMs without agentic AI components.
+```
+"""
+
+---
+
+Subsection "Quality Assessment Checklist"
+
+Step 1: Questions
+"""
+- Does the paper explicitly describe the agentic AI patterns, tool-calling mechanisms, or communication protocols used?
+- (*) Regardless of other quality criteria, does this source constitute a seminal work, a core protocol definition or a unique architectural reference that is indispensable for the research objectives?
+- Is the described use case sufficiently complex to be transferable to Quote generation?
+- Does the study demonstrate a Proof of Concept (PoC), a prototype implementation, or a detailed simulation (beyond theoretical concepts)?
+- Does the source provide a concrete architectural diagram or a detailed technical description of the agentic AI components?
+"""
+
+Step 2: Answers
+"""
+Description	| Weight	
+(*) Must-Have	| 2.5	 
+Yes 		| 1.0	 
+Partially	| 0.5	 
+No		| 0.0
+"""
+
+Step 3: Quality Assessment Scores
+"""
+Max Score = 12.5 -> Calculated based on the number of questions and on the answer of greater weight. Hint: The answer Option `(*) Must-Have` is only on the Question with `(*)` applicable, so the real max score is 6.5!
+Cutoff Score = 2.5
+"""
+
+---
+
+Subsection "Data Extraction Form"
+"""
+Description	| Type		| Values
+...
+
+Type
+```
+<select id="data-extraction-field-type" class="form-control">
+  <option value="">Select...</option>
+  <option value="B">Boolean Field</option>
+  <option value="S">String Field</option>
+  <option value="F">Float Field</option>
+  <option value="I">Integer Field</option>
+  <option value="D">Date Field</option>
+  <option value="O">Select One Field</option>
+  <option value="M">Select Many Field</option>
+</select>
+```
+
+Values
+```
+<div class="select-field" style="">
+  <textarea class="form-control" id="data-extraction-lookup-values" style="width: 250px" autocomplete="off"></textarea>
+  <p>Add one value per line.</p>
+</div>
+```
+"""
+
+---
+---
+
+Section "Conducting"
+
+---
+
+Subsection "Search"
+
+Step 1: Search Strings
+"""
+About the Search Strings
+The base search string is the search string designed during the planning phase. It should be database agnostic, enhance the reader's readability and represent the essence of the search string used in the digital libraries.
+
+Most of the digital libraries have it's particularities and different advanced search resources. Here you can store the specific search string used in each database.
+
+You can edit the base search string in the planning tab.
+
+Hint: Add digital source-specific search strings. Use this space to save all search string formats used during the research.
+"""
+
+Step 2: Search
+"""
+Hint: Parsifal is integrated with Scopus's and Science@Direct's databases. To enable the automatic search pick them as sources in the planning tab.
+"""
+
+---
+
+Subsection "Import Studies"
+"""
+Example:
+Source		| Imported Studies
+arXiv		| 25
+Google Scholar	| 15
+Springer Link	| 10
+ResearchGate	| 2
+etc.
+"""
+
+---
+
+Subsection "Study Selection"
+"""
+Remove duplicates
+Reject non-relevant references
+Accept relevant references
+"""
+
+---
+
+Subsection "Quality Assessment"
+"""
+Answer the Questions
+-> All references with a score higher than 2.5 have reached the final phase!
+"""
+
+---
+
+Subsection "Data Extraction"
+"""
+Extract important data of the refs that've reached the final phase.
+-> The data extraction table could be useful. However, more than one table may be necessary to separate the concerns.
+"""
+
+---
+
+Subsection "Data Analysis"
+"""
+Descriptive analysis of our literature Research
+```
+Articles Per Source
+Accepted Articles Per Source
+Final Articles Per Year (After study selection and quality assessment)
+```
+"""
+
+---
+---
+
+Section "Reporting"
+"""
+Download a Report
+
+Review 
+|X| Name
+|X| Authors
+|X| Description
+
+Planning 
+|X| Objectives
+|X| PICOC
+|X| Research Questions
+|X| Keywords and Synonyms
+|X| Search String
+|X| Sources
+|X| Selection Criteria
+|X| Quality Assessment Checklist
+|X| Data Extraction Form
+
+Conducting 
+|X| Source Search Strings
+|X| Number of Imported Studies
+"""
