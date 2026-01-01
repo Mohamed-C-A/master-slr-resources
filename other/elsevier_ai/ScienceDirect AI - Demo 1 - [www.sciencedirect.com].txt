@@ -1,0 +1,60 @@
+How can Multi-Agent RAG systems be designed and implemented to effectively support automated complex proposal generation in industrial B2B contexts?
+https://www.sciencedirect.com/ai?q=How+can+Multi-Agent+RAG+systems+be+designed+and+implemented+to+effectively+support+automated+complex+proposal+generation+in+industrial+B2B+contexts%3F
+
+## Modular Multi-Agent RAG System Architectures for Industrial Proposal Generation
+
+Multi-agent Retrieval-Augmented Generation (RAG) systems in industrial B2B contexts are designed as modular architectures where specialized AI agents collaborate to automate complex proposal generation tasks. In one implementation, the system is divided into dedicated agents, each responsible for a specific domain: information extraction from technical documents, vulnerability analysis, and payload or solution synthesis. These agents operate on their own domain-specific vector stores, using RAG-based retrieval to access and process relevant data. A supervisory agent orchestrates the workflow, coordinating multistep interactions, integrating intermediate results, resolving ambiguities, and issuing function calls to external APIs or web sources as needed. This design enables real-time, context-aware, and coherent output generation, such as tailored technical narratives or solution templates, with minimal human intervention. The architecture leverages query planning, metadata-based routing, and recursive cross-agent retrieval to ensure comprehensive and accurate proposal assembly, demonstrating the feasibility of automated, agent-based workflows in complex industrial settings (Stein et al., 2025), (Zhang, Chen & Ford, 2024).
+
+## Hybrid Retrieval Strategies and Multimodal Data Integration
+
+To address the challenges of handling diverse industrial data formats (text, tables, images) and complex semantic associations, advanced multi-agent RAG systems employ hybrid retrieval strategies. These include the integration of multi-modal semantic trees, knowledge graphs, and vector-based retrieval to form a comprehensive retrieval base. Fine-grained context enhancement strategies are applied to bridge semantic gaps, and multi-channel hybrid retrieval combines expert feedback, semantic structures, and graphs to optimize the RAG pipeline. This approach improves the accuracy of retrieving and generating multimodal, contextually relevant responses, as validated in engineering document chat systems for tasks such as wind turbine assembly. Ablation studies show that such hybrid, multi-agent RAG models outperform traditional RAG approaches in both retrieval and generation accuracy (Li et al., 2025), (Wan et al., 2025).
+
+## Domain-Specific Knowledge Bases and Semantic Alignment
+
+Effective proposal generation in industrial B2B contexts requires the integration of extensive, domain-specific knowledge bases. These are constructed from heterogeneous sources such as technical documents, maintenance logs, patents, and regulatory records. Data is preprocessed, semantically enriched with metadata, and stored in topic-specific vector databases. Semantic alignment is achieved by injecting domain-specific constraints and using classification models (e.g., BERT-based) to accurately match queries to relevant knowledge base entries. Hybrid KG-vector frameworks further enhance contextual relevance and retrieval precision by combining structured knowledge graph reasoning with efficient vector-based search, resulting in improved accuracy and context precision in tasks like design for additive manufacturing (Stein et al., 2025), (Wan et al., 2025), (Chen et al., 2025), (Liu et al., 2025).
+
+## Orchestration, Prompt Engineering, and Output Quality
+
+The orchestration of multi-agent RAG systems relies on supervisory agents that manage agent collaboration, integrate results, and ensure the consistency and relevance of generated proposals. Prompt engineering is used to structure queries and retrieved contexts, instructing the generation module to base its outputs strictly on retrieved evidence, thereby reducing hallucinations and improving factual accuracy. Recursive clustering and ranking feedback mechanisms further refine retrieval and response quality. Experimental results demonstrate significant improvements in accuracy, recall, and mean reciprocal rank for technical service and regulatory document retrieval, underscoring the effectiveness of these orchestration and prompt engineering strategies (Stein et al., 2025), (Zhang, Chen & Ford, 2024), (Chen et al., 2025), (Chen et al., 2025).
+
+## Challenges and Future Directions
+
+While multi-agent RAG systems show technical feasibility and substantial performance gains in industrial proposal generation, challenges remain regarding scalability, technical constraints, and deployment in real-world manufacturing environments. The integration of multimodal data, the need for high reliability in safety-critical applications, and the balance between precision and scalability are ongoing areas of research. Nonetheless, these systems lay the groundwork for adaptive, intelligent, and human-aligned automation in industrial B2B contexts (Li et al., 2025), (Wan et al., 2025), (Singh, Rousta & Huang, 2026), (Lee et al., 2025).
+
+References
+
+Stein S., Pilgermann M., Weber S., Sedlmayr M. (2025). Leveraging MDS2 and SBOM data for LLM-assisted vulnerability analysis of medical devices. Computational and Structural Biotechnology Journal, 28. https://doi.org/10.1016/j.csbj.2025.07.012
+
+(https://www.sciencedirect.com/science/article/pii/S2001037025002788?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Li F., Li X., Wen S., Huang H., Bao J. (2025). SAMAC-R 3 -MED: Semantic alignment and multi-agent collaboration of retriever-reranker-responder models for multimodal engineering documents. Computers in Industry, 171. https://doi.org/10.1016/j.compind.2025.104336
+
+(https://www.sciencedirect.com/science/article/pii/S0166361525001010?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Chen S., Liang X., Liu Y., Li X., Jin X., Du Z. (2025). Customized large-scale model for human-AI collaborative operation and maintenance management of building energy systems. Applied Energy, 393. https://doi.org/10.1016/j.apenergy.2025.126169
+
+(https://www.sciencedirect.com/science/article/pii/S0306261925008992?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Chen L., Pardeshi M., Liao Y., Pai K. (2025). Application of retrieval-augmented generation for interactive industrial knowledge management via a large language model. Computer Standards & Interfaces, 94. https://doi.org/10.1016/j.csi.2025.103995
+
+(https://www.sciencedirect.com/science/article/pii/S0920548925000248?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Zhang L., Chen Z., Ford V. (2024). Advancing building energy modeling with large language models: Exploration and case studies. Energy and Buildings, 323. https://doi.org/10.1016/j.enbuild.2024.114788
+
+(https://www.sciencedirect.com/science/article/pii/S0378778824009046?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Singh A., Rousta M., Huang B. (2026). Oscillation analysis using Retrieval-Augmented Generation. Computers & Chemical Engineering, 206. https://doi.org/10.1016/j.compchemeng.2025.109489
+
+(https://www.sciencedirect.com/science/article/pii/S0098135425004922?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Liu R., Ren H., Ren H., Rui W., Cui W., Liang X., Yang C., Gui W. (2025). Knowledge Enhanced Industrial Question-Answering Using Large Language Models. Engineering. https://doi.org/10.1016/j.eng.2025.07.035
+
+(https://www.sciencedirect.com/science/article/pii/S2095809925004527?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Lee J., Kim J., Kim H., Lee I., Ryu S. (2025). IM-Chat: A multi-agent LLM framework integrating tool-calling and diffusion modeling for knowledge transfer in injection molding industry. Journal of Manufacturing Systems, 83. https://doi.org/10.1016/j.jmsy.2025.11.007
+
+(https://www.sciencedirect.com/science/article/pii/S0278612525002687?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Wan Y., Chen Z., Liu Y., Chen C., Packianather M. (2025). Empowering LLMs by hybrid retrieval-augmented generation for domain-centric Q&A in smart manufacturing. Advanced Engineering Informatics, 65. https://doi.org/10.1016/j.aei.2025.103212
+
+(https://www.sciencedirect.com/science/article/pii/S1474034625001053?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)

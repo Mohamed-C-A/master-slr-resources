@@ -1,0 +1,127 @@
+What representational system architectures, agent roles, and orchestration patterns dominate the current literature for agentic workflows in proposal engineering? Period from 2023 onwards
+https://www.sciencedirect.com/ai?q=What+representational+system+architectures%2C+agent+roles%2C+and+orchestration+patterns+dominate+the+current+literature+for+agentic+workflows+in+proposal+engineering%3F+Period+from+2023+onwards
+
+Analyzing and optimizing your question
+Searching most relevant research for:
+"What are the dominant representational system architectures, agent roles, and orchestration patterns in agentic workflows for proposal engineering since 2023?"
+Searching keywords:
+""agentic workflows" "proposal engineering" "representational system architectures" "agent roles" "orchestration patterns""
+Finalizing summary
+
+## Dominant Representational System Architectures
+
+Recent literature on agentic workflows in proposal engineering identifies several key architectural paradigms:
+
+- **All-in-One Single Agent Architecture**: This approach consolidates all functionalities into a single, centralized agent, reducing orchestration overhead and simplifying management. It is adopted by systems such as Suna, Search-R1, OpenResearcher, and enterprise products like the OpenAI Deep Research Agent and Perplexity’s Deep Research Agent. While this architecture enables reinforcement learning at the system level, it is heavily dependent on the reasoning capacity of the underlying foundation model and lacks flexibility and scalability for complex or evolving scenarios(Xu et al., 2025).
+
+- **Static Multi-Agent Architecture**: Here, tasks are distributed across specialized agents connected through predefined, linear or branching workflows. Frameworks such as AWS Step Functions and Google Cloud Workflows support this structure, which offers predictability, transparency, and reliability. Systems like CoSearchAgent, AI Scientist, and Agent Laboratory utilize this approach, but it struggles with adaptability to unforeseen dependencies or changing goals(Xu et al., 2025).
+
+- **Graph-Structured and Dynamic Multi-Agent Architectures**: Graph-structured workflows, supported by frameworks like LangGraph, allow richer agent interactions through bi-directional or multi-source connections, though they increase orchestration complexity and rely on manual definitions. The Dynamic Multi-Agent Architecture further decomposes high-level tasks into subtasks handled by modular, specialized agents capable of reconfiguring roles and interactions at runtime. Frameworks such as OpenManus AI, OWL, LangGraph Multi-Agent Swarm, and DRAMA support these systems, which are particularly suited to environments with constantly changing needs and tools(Xu et al., 2025).
+
+- **Layered and Modular Architectures**: Some systems employ layered frameworks, such as a seven-layer architecture (network, middleware, simulation, modeling, search, decision, collaboration) or four-level architectures for meta-data creation, feature selection, model building, and real-time prediction(Lee & Hwang, 2003), (Meshkin, Aghaee & Sadeghi, 2011). Modular architectures centered around large language models (LLMs) are also common, integrating reasoning, planning, memory, and tool usage for autonomous task completion(Lee & Su, 2025).
+
+## Agent Roles in Proposal Engineering Workflows
+
+Agentic workflows typically feature a variety of specialized agent roles:
+
+- **Role-Based Cooperation**: Agents are assigned specific roles such as planner, assigner, worker, and creator. For example, a planner agent decomposes user goals into tasks, an assigner orchestrates task assignment, workers execute domain-specific tasks, and a creator can instantiate new agents as needed(Liu et al., 2025).
+
+- **Hierarchical and Functional Roles**: Architectures often include workflow planner agents (control workflow), broker agents (coordinate tasks and mediate communication), ontology agents (perform ontology-based reasoning and matchmaking), and service agents (execute tasks)(Wang, Shen & Hao, 2006). Other systems mimic organizational structures, with agents modeled after corporate departments (e.g., CEO, CTO, engineer), each with strictly defined, role-bound responsibilities(Sapkota, Roumeliotis & Karkee, 2026).
+
+- **Specialized Task Agents**: In practical applications, agents are assigned to tasks such as scenario planning, resource specification, content generation, quality review, and output formatting. For example, in a simulation scenario workflow, agents handle scenario outline, roles and resources, patient briefings, scenario states, educational content, review, and editing(Barra et al., 2025).
+
+- **Meta-Agents and Orchestrators**: Orchestration layers or meta-agents coordinate the lifecycle of subordinate agents, manage dependencies, assign roles, and resolve conflicts. For instance, a virtual CEO meta-agent in ChatDev distributes subtasks and integrates outputs(Sapkota, Roumeliotis & Karkee, 2026).
+
+## Orchestration Patterns
+
+Several orchestration patterns dominate agentic workflows:
+
+- **Planner–Executor–Critic Pattern**: This pattern, visible in domains such as HVAC and operations & maintenance, involves a planner agent generating a plan, executor agents carrying out tasks, and critic agents evaluating outcomes. This supports autonomous orchestration, including tool calling and self-debugging(Arslan & Munawar, 2025).
+
+- **GroupChat and Conversational Orchestration**: Communication among agents can be managed centrally by a GroupChatManager, which selects speakers, broadcasts messages, and ensures shared context. Collaboration strategies may be sequential, parallel, routing, orchestrator-workers, or evaluator-optimizer, and can be visualized for workflow refinement(Dong et al., 2025).
+
+- **Directed Acyclic Graph (DAG) Workflows**: Tasks are organized into a DAG, ensuring a clear sequence with defined relationships, predictable execution, and efficient orchestration. Each task is assigned specific roles and constraints(Zheng et al., 2025).
+
+- **Layered Orchestration**: Some systems use a user layer for workflow specification, a system layer for mapping workflows to software agents, and a run-time layer for tool and resource access via wrapper agents. Dynamic generation of workflows is supported by domain-specific ontologies(Cannata, Corradini & Merelli, 2007).
+
+- **Multi-Agent Collaboration and Modular Pipelines**: Agentic AI systems often employ modular pipelines, with agents collaborating via communication channels (message queues, blackboards, shared memory) and advanced reasoning frameworks (e.g., ReAct, Chain-of-Thought, Tree of Thoughts) to iteratively break down and solve complex tasks(Lee & Su, 2025), (Sapkota, Roumeliotis & Karkee, 2026).
+
+- **Agent-to-Agent (A2A) Protocols**: Recent developments include open protocols for agent interoperability across vendors, enabling autonomous agents to collaborate even if built by different organizations(Gonzalez, Habel & Hunter, 2026).
+
+## Synthesis and Trends
+
+- **From Prompts to Pipelines**: There is a shift from basic prompting to fine-tuning, inference, and reasoning/extraction methods, emphasizing customization, verifiability, and repeatability(Arslan & Munawar, 2025).
+- **Emphasis on Modularity and Adaptability**: The modularity, adaptability, and task specialization of agentic workflows are highlighted as key to efficiently addressing complex, multifaceted challenges in various domains, including proposal engineering(Schultz, 2025).
+- **Integration of Memory and Reasoning**: Persistent memory architectures (episodic, semantic, vector-based) and advanced reasoning/planning techniques are increasingly integrated to support iterative, context-aware workflows(Lee & Su, 2025), (Sapkota, Roumeliotis & Karkee, 2026).
+- **Scalability and Flexibility**: Dynamic multi-agent and graph-structured architectures are favored for their ability to adapt to changing requirements and environments, though they introduce additional orchestration complexity(Xu et al., 2025), (Lee & Su, 2025).
+
+## Summary Table: Key Architectures, Roles, and Orchestration Patterns
+
+| Architecture Type         | Example Systems/Frameworks         | Agent Roles                          | Orchestration Pattern                |
+|---------------------------|------------------------------------|--------------------------------------|--------------------------------------|
+| All-in-One Single Agent   | Suna, OpenAI Deep Research Agent   | Centralized agent                    | Direct, monolithic                   |
+| Static Multi-Agent        | CoSearchAgent, AI Scientist        | Planner, worker, broker, ontology    | Predefined, linear/branching         |
+| Dynamic Multi-Agent       | OpenManus AI, DRAMA, LangGraph     | Modular, reconfigurable specialists  | Dynamic, graph-structured            |
+| Modular/LLM-Centric       | AutoGen, CAMEL, HuggingGPT         | Summarizer, retriever, planner, CEO  | Modular pipelines, meta-agent        |
+| Layered                   | 7-layer, 4-level architectures     | Workflow planner, broker, service    | Layered, hierarchical                |
+| Conversational/GroupChat  | AutoGen studio                     | UserProxyAgent, GroupChatManager     | Sequential, parallel, routing        |
+
+(Xu et al., 2025), (Lee & Su, 2025), (Liu et al., 2025), (Wang, Shen & Hao, 2006), (Sapkota, Roumeliotis & Karkee, 2026), (Barra et al., 2025), (Arslan & Munawar, 2025), (Dong et al., 2025), (Zheng et al., 2025), (Cannata, Corradini & Merelli, 2007)
+
+References
+
+Xu W., Wan H., Goel S., Antonopoulos C. (2025). Development of a dynamic multi-agent network for building energy modeling: A case study towards scalable and autonomous energy modeling. Energy and Buildings. https://doi.org/10.1016/j.enbuild.2025.116712
+
+(https://www.sciencedirect.com/science/article/pii/S0378778825014422?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Liu Y., Lo S., Lu Q., Zhu L., Zhao D., Xu X., Harrer S., Whittle J. (2025). Agent design pattern catalogue: A collection of architectural patterns for foundation model based agents. Journal of Systems and Software, 220. https://doi.org/10.1016/j.jss.2024.112278
+
+(https://www.sciencedirect.com/science/article/pii/S0164121224003224?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Wang S., Shen W., Hao Q. (2006). An agent-based Web service workflow model for inter-enterprise collaboration. Expert Systems with Applications, 31. https://doi.org/10.1016/j.eswa.2006.01.011
+
+(https://www.sciencedirect.com/science/article/pii/S0957417406000157?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Arslan M., Munawar S. (2025). Large language models in building energy applications: a survey. Energy and Buildings. https://doi.org/10.1016/j.enbuild.2025.116800
+
+(https://www.sciencedirect.com/science/article/pii/S0378778825015300?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Lee S., Hwang C. (2003). Architecture layers and engineering approach for agent-based system. Information and Software Technology, 45. https://doi.org/10.1016/S0950-5849(03)00057-0
+
+(https://www.sciencedirect.com/science/article/pii/S0950584903000570?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Sapkota R., Roumeliotis K., Karkee M. (2026). AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges. Information Fusion, 126. https://doi.org/10.1016/j.inffus.2025.103599
+
+(https://www.sciencedirect.com/science/article/pii/S1566253525006712?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Zheng K., Zhong Y., Su X., Leng J., Liu Q., Chen X. (2025). Towards agentic smart design: An industrial large model-driven human-in-the-loop agentic workflow for geometric modelling. Applied Soft Computing, 185. https://doi.org/10.1016/j.asoc.2025.113920
+
+(https://www.sciencedirect.com/science/article/pii/S1568494625012335?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Meshkin A., Aghaee N., Sadeghi M. (2011). Modeling and implementing an agent-based system for prediction of protein relative solvent accessibility. Expert Systems with Applications, 38. https://doi.org/10.1016/j.eswa.2010.11.109
+
+(https://www.sciencedirect.com/science/article/pii/S0957417410013473?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Barra F., Rodella G., Costa A., Scalogna A., Carenzo L., Monzani A., Corte F. (2025). From prompt to platform: an agentic AI workflow for healthcare simulation scenario design. Advances in Simulation, 10. https://doi.org/10.1186/s41077-025-00357-z
+
+(https://doi.org/10.1186/s41077-025-00357-z)
+
+Schultz J. (2025). On the potential of agentic workflows for animal training plan generation. Frontiers in Veterinary Science, 12. https://doi.org/10.3389/fvets.2025.1563233
+
+(https://doi.org/10.3389/fvets.2025.1563233)
+
+Dong Y., Zhan Z., Hu Y., Doe D., Han Z. (2025). AI BIM coordinator for non-expert interaction in building design using LLM-driven multi-agent systems. Automation in Construction, 180. https://doi.org/10.1016/j.autcon.2025.106563
+
+(https://www.sciencedirect.com/science/article/pii/S092658052500603X?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Cannata N., Corradini F., Merelli E. (2007). A Resourceomic Grid for bioinformatics. Future Generation Computer Systems, 23. https://doi.org/10.1016/j.future.2006.07.005
+
+(https://www.sciencedirect.com/science/article/pii/S0167739X06001397?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Gonzalez G., Habel J., Hunter G. (2026). AI agents, agentic AI, and the future of sales. Journal of Business Research, 202. https://doi.org/10.1016/j.jbusres.2025.115799
+
+(https://www.sciencedirect.com/science/article/pii/S0148296325006228?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)
+
+Lee J., Su H. (2025). Agentic AI for smart manufacturing. Manufacturing Letters, 46. https://doi.org/10.1016/j.mfglet.2025.10.013
+
+(https://www.sciencedirect.com/science/article/pii/S2213846325002883?_origin=sd_ai_core&_zone=rslt_list_item&dgcid=sd_ai_summary)

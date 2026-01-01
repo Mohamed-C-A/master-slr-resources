@@ -1,0 +1,17 @@
+1. Old
+("Offer Generation" OR "Automated Quoting" OR "CPQ (Configure Price Quote)" OR "Complex Document Generation" OR "Enterprise Context" OR "Offer Generation" OR "Proposal Generation" OR "Sales Automation") AND ("Communication Protocols" OR "A2A" OR "ACP" OR "MCP" OR "Multi-Agent System" OR "Agent Orchestration" OR "Agentic AI" OR "Autonomous Agents" OR "Intelligent Agents" OR "LLM Orchestration" OR "MAS" OR "Multi-Agent System" OR "Retrieval-Augmented Generation" OR "GenAI" OR "Generative AI" OR "LLM" OR "Large Language Model" OR "RAG" OR "Retrieval-Augmented Generation" OR "SLM" OR "Small Language Model") AND ("Data/LLM Security" OR "Compliance" OR "Data Governance" OR "On-premise" OR "Privacy" OR "Sovereignty" OR "Evaluation Metrics" OR "Accuracy" OR "Efficiency" OR "KPI" OR "Performance Analysis" OR "Quality Assurance" OR "ROI")
+
+2. Old
+("Proposal Engineering" OR "Automated Offer Generation" OR "B2B Sales Automation" OR "CPQ (Configure Price Quote)" OR "Complex Document Generation" OR "Quote Generation" OR "Tender Management") AND ("Multi-Agent System" OR "Agent Orchestration" OR "Agentic AI" OR "Autonomous Agents" OR "Collaborative Agents" OR "Intelligent Agents" OR "LLM Agents" OR "LLM Orchestration" OR "MAS" OR "Retrieval-Augmented Generation" OR "GenAI" OR "Generative AI" OR "LLM" OR "Large Language Model" OR "RAG" OR "Retrieval-Augmented Generation" OR "Vector Database") AND ("System Attributes" OR "Data Privacy" OR "Evaluation Metrics" OR "Hallucination Mitigation" OR "On-premise")
+
+3. Old
+TITLE-ABS-KEY(("Proposal Engineering" OR "Automated Offer Generation" OR "B2B Sales Automation" OR "Complex Document Generation" OR "Tender Management") AND ("Multi-Agent System" OR "Agent Orchestration" OR "Agentic AI" OR "Autonomous Agents" OR "Collaborative Agents" OR "MAS" OR "Retrieval-Augmented Generation" OR "LLM" OR "Large Language Model" OR "RAG" OR "Retrieval-Augmented Generation") AND ("Evaluation" OR "Data Privacy" OR "Evaluation Metrics" OR "Hallucination Mitigation" OR "On-premise"))
+
+4. Best
+("Enterprise AI") AND
+("Multi-Agent System" OR "Agent Orchestration" OR "Agentic AI" OR "Large Language Model" OR "RAG" OR "Retrieval-Augmented Generation") AND 
+("Data Privacy" OR "Evaluation Metrics" OR "On-premise")
+
+TITLE-ABS-KEY(("Agentic Architecture") AND
+("Multi-Agent System" OR "Agent Orchestration" OR "Agentic AI" OR "Large Language Model" OR "RAG" OR "Retrieval-Augmented Generation") AND 
+("Data Privacy" OR "Evaluation Metrics" OR "On-premise"))
