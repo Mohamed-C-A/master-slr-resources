@@ -1,30 +1,68 @@
-# master-slr-resources
+# Supplementary Materials: Agentic AI for Automated Proposal Generation
 
-This repository contains supplementary appendix material for the seminar paper **Agentic AI Systems for Automated Proposal Generation: A Systematic Literature Review**. It documents the LLM-assisted literature retrieval and the subsequent verification steps to support transparency, traceability, and methodological reproducibility.
+This repository contains supplementary materials for the seminar paper **Agentic AI Systems for Automated Proposal Generation: A Systematic Literature Review**.
 
-## What is included
+## Contents
 
-- Screenshots documenting the search process across the selected sources and tools
-- Raw result exports and intermediate artifacts
-- Screening and quality-assessment evidence (where applicable)
-- Additional notes required to interpret the search outputs and decisions
+```plain
+├── input/
+│   ├── protocol/
+|   |   └── parsifal_sota_workflow.txt      # Complete SLR protocol (Main Ressource)
+│   └── instructions/
+|       └── research_instructions.txt       # Extra instructions to go with the SLR protocol
+|
+├── other                                   # (OLD) Supporting materials and search results
+│   ├── classic/                            # Traditional database search outputs
+│   └── elsevier_ai/                        # Elsevier AI-powered search results
+|       ├── leapspace/                      # LeapSpace platform search outputs
+|       ├── sciencedirect_ai/               # ScienceDirect AI search demos
+|       └── scopus_ai/                      # Scopus AI search results
+|
+├── output/
+│   ├── chatgpt-deep-research/              # GPT-5.2 raw outputs
+│   ├── claude-research/                    # Claude Opus 4.5 raw outputs
+│   ├── gemini-deep-research/               # Gemini 3 raw outputs
+│   └── perplexityai-deep-research/         # Perplexity raw outputs
+├── NOTICE.md
+└── README.md
+```
 
-## How this repository relates to the paper
+## Protocol
 
-The paper references this repository as an appendix. The materials here provide the underlying evidence for the described AI-assisted search strategy and the final corpus construction.
+The file `parsifal_sota_workflow.txt` contains the complete SLR protocol, including:
 
-## Reproducibility and adaptation
+- PICOC criteria
+- Research questions
+- Inclusion and exclusion criteria
+- Quality assessment checklist with scoring weights
+- Search string construction guidance
 
-The documented workflow can be followed by other researchers as a methodological reference. However, replication in a different domain requires explicit scoping decisions (e.g., what to include/exclude and how to interpret relevance), which depends on the researcher’s domain expertise and research objectives.
+This protocol was provided as input to all four AI research platforms.
 
-## Legal notice / rights
+## AI Platform Outputs
 
-**No license is granted.** All rights reserved.
+Each platform received the identical protocol and returned ranked paper recommendations. The raw outputs are archived without modification. Final study selection was performed by the primary author based on cross-platform comparison and expert assessment of relevance to the research questions.
 
-This repository is published solely as supplementary appendix material for an academic seminar paper. No permission is granted to use, copy, modify, redistribute, or create derivative works from any part of this repository without prior written consent.
+## Methodology Note
 
-Third-party content (e.g., paper PDFs, publisher materials, screenshots of external platforms) remains the property of its respective owners and is included for transparency and documentation only.
+The AI platforms applied the protocol criteria autonomously. Automated quality scores informed but did not determine final inclusion decisions. The decisive criterion was substantive relevance to the research objectives as assessed by the primary author.
+
+## Reproducibility
+
+Other researchers may inspect these materials to:
+
+- Assess the validity of the AI-assisted approach
+- Replicate the methodology with the same or similar platforms
+- Adapt the protocol to related research domains
+
+Domain-specific scoping decisions (inclusion/exclusion interpretation, relevance judgement) require the researcher's own expertise.
+
+## Rights
+
+**All rights reserved.** See `NOTICE.md` for details.
+
+This repository is published solely as supplementary material for academic transparency. Third-party content remains the property of its respective owners.
 
 ## Contact
 
-For permission requests or questions regarding the appendix material, please contact the author.
+For questions regarding these materials, please contact the author.
