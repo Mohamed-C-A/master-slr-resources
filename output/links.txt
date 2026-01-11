@@ -1,0 +1,6 @@
+Links to the chats (where available):
+
+- ChatGPT: https://chatgpt.com/g/g-p-695428d520d881918402b8760648f4cf-slr/project (no ChatGPT account required)
+- Claude: sharing not possible (have a look in the claude-research folder for screenshots)
+- Gemini: https://gemini.google.com/share/21779f3f69dd (account required)
+- Perplexity AI: https://www.perplexity.ai/search/start-with-the-systematic-rese-juQ1DLPfRMmnHNXDsyvsOg#0 (account required)
