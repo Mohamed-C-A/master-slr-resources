@@ -22,7 +22,8 @@ This repository contains supplementary materials for the seminar paper **Agentic
 │   ├── chatgpt-deep-research/              # GPT-5.2 raw outputs
 │   ├── claude-research/                    # Claude Opus 4.5 raw outputs
 │   ├── gemini-deep-research/               # Gemini 3 raw outputs
-│   └── perplexityai-deep-research/         # Perplexity raw outputs
+|   ├── perplexityai-deep-research/         # Perplexity AI raw outputs
+│   └── links.txt                           # Links to the chats
 |
 ├── slr_studies/
 │   └── slr_studies.bib                     # bibtex file
