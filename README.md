@@ -7,7 +7,7 @@ This repository contains supplementary materials for the seminar paper **Agentic
 ```plain
 ├── input/
 │   ├── protocol/
-|   |   └── parsifal_sota_workflow.txt      # Complete SLR protocol (Main Ressource)
+|   |   └── parsifal_sota_workflow.txt      # Complete SLR protocol
 │   └── instructions/
 |       └── research_instructions.txt       # Extra instructions to go with the SLR protocol
 |
@@ -23,6 +23,10 @@ This repository contains supplementary materials for the seminar paper **Agentic
 │   ├── claude-research/                    # Claude Opus 4.5 raw outputs
 │   ├── gemini-deep-research/               # Gemini 3 raw outputs
 │   └── perplexityai-deep-research/         # Perplexity raw outputs
+|
+├── slr_studies/
+│   └── slr_studies.bib                     # bibtex file
+|
 ├── NOTICE.md
 └── README.md
 ```
